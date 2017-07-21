@@ -1,0 +1,7 @@
+DATETIME -> INTEGER, REAL, or TEXT
+DECIMAL -> REAL (or INTEGER?)
+LONGTEXT, VARCHAR -> TEXT
+
+DEFAULT: column_default
+
+JSON Schema validation

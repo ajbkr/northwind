@@ -16,6 +16,15 @@ var generators = {
   },
   '/tables/shippers': {
     'templates/create-table.handlebars': 'dist/shippers.js'
+  },
+  '/tables/orders_tax_status': {
+    'templates/create-table.handlebars': 'dist/orders-tax-status.js'
+  },
+  '/tables/orders_status': {
+    'templates/create-table.handlebars': 'dist/orders-status.js'
+  },
+  '/tables/orders': {
+    'templates/create-table.handlebars': 'dist/orders.js'
   }
 };
 

@@ -4,7 +4,7 @@
   "description": "Northwind database as JSON",
   "main": "index.js",
   "scripts": {
-    "dist": "mkdir -p dist && che che.conf.js northwind.json",
+    "dist": "mkdirp dist && che che.conf.js northwind.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew J. Baker <andrew_j_baker2@hotmail.com>",
@@ -12,5 +12,8 @@
   "dependencies": {
     "che": "git+https://github.com/ajbkr/che.git"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "mkdirp": "^0.5.1"
+  }
 }
