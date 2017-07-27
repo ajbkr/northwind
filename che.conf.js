@@ -25,6 +25,12 @@ var generators = {
   },
   '/tables/orders': {
     'templates/create-table.handlebars': 'dist/orders.js'
+  },
+  '/tables/products': {
+    'templates/create-table.handlebars': 'dist/products.js'
+  },
+  '/tables/purchase_order_status': {
+    'templates/create-table.handlebars': 'dist/purchase-order-status.js'
   }
 };
 
