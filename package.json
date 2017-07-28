@@ -4,7 +4,7 @@
   "description": "Northwind database as JSON",
   "main": "index.js",
   "scripts": {
-    "dist": "mkdirp dist && che che.conf.js northwind.json",
+    "dist": "mkdirp dist/models && che che.conf.js northwind.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew J. Baker <andrew_j_baker2@hotmail.com>",

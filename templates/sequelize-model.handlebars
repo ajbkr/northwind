@@ -1,0 +1,10 @@
+var Sequelize = require('sequelize');
+
+var sequelize = new Sequelize('database', 'username', 'password');
+
+const {{pascalCase table_name}} = sequelize.define('{{table_name}}', {
+{{#each columns}}{{#if @first}}{{else}},
+{{/if}}  {{this.column_name}}: Sequelize.{{this.data_type}}{{/each}}
+});
+
+module.exports = {{pascalCase table_name}};

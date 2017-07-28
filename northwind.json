@@ -562,6 +562,16 @@
           "is_nullable": true
         }
       }
+    },
+    "suppliers": {
+      "table_name": "suppliers",
+      "columns": {
+        "id": {
+          "column_name": "id",
+          "data_type": "INT",
+          "is_nullable": false
+        }
+      }
     }
   }
 }
