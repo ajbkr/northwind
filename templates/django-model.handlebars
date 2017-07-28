@@ -1,0 +1,5 @@
+from django.db import models
+
+class {{pascalCase table_name}}(models.Model):
+{{#each columns}}    {{this.column_name}} = models.{{pascalCase this.data_type}}Field()
+{{/each}}
