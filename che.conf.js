@@ -42,6 +42,14 @@ var generators = {
   '/tables/purchase_order_status': {
     'templates/create-table.handlebars': 'dist/purchase-order-status.js',
     'templates/sequelize-model.handlebars': 'dist/models/purchase-order-status.js'
+  },
+  '/tables/suppliers': {
+    'templates/create-table.handlebars': 'dist/suppliers.js',
+    'templates/sequelize-model.handlebars': 'dist/models/supplier.js'
+  },
+  '/tables/purchase_orders': {
+    'templates/create-table.handlebars': 'dist/purchase-orders.js',
+    'templates/sequelize-model.handlebars': 'dist/models/purchase-order.js'
   }
 };
 

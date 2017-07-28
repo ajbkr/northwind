@@ -570,6 +570,184 @@
           "column_name": "id",
           "data_type": "INT",
           "is_nullable": false
+        },
+        "company": {
+          "column_name": "company",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "last_name": {
+          "column_name": "last_name",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "first_name": {
+          "column_name": "first_name",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "email_address": {
+          "column_name": "email_address",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "job_title": {
+          "column_name": "job_title",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "business_phone": {
+          "column_name": "business_phone",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "home_phone": {
+          "column_name": "home_phone",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "mobile_phone": {
+          "column_name": "mobile_phone",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "fax_number": {
+          "column_name": "fax_number",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "address": {
+          "column_name": "address",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "city": {
+          "column_name": "city",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "state_province": {
+          "column_name": "state_province",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "zip_postal_code": {
+          "column_name": "zip_postal_code",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "country_region": {
+          "column_name": "country_region",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "web_page": {
+          "column_name": "web_page",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "notes": {
+          "column_name": "notes",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "attachments": {
+          "column_name": "attachments",
+          "data_type": "BLOB",
+          "is_nullable": true
+        }
+      }
+    },
+    "purchase_orders": {
+      "table_name": "purchase_orders",
+      "columns": {
+        "id": {
+          "column_name": "id",
+          "data_type": "INT",
+          "is_nullable": false
+        },
+        "supplier_id": {
+          "column_name": "supplier_id",
+          "data_type": "INT",
+          "is_nullable": true
+        },
+        "created_by": {
+          "column_name": "created_by",
+          "data_type": "INT",
+          "is_nullable": true
+        },
+        "submitted_date": {
+          "column_name": "submitted_date",
+          "column_comment": "DATETIME",
+          "data_type": "REAL",
+          "is_nullable": true
+        },
+        "creation_date": {
+          "column_name": "creation_date",
+          "column_comment": "DATETIME",
+          "data_type": "REAL",
+          "is_nullable": true
+        },
+        "status_id": {
+          "column_name": "status_id",
+          "data_type": "INT",
+          "is_nullable": true
+        },
+        "expected_date": {
+          "column_name": "expected_date",
+          "column_comment": "DATETIME",
+          "data_type": "REAL",
+          "is_nullable": true
+        },
+        "shipping_fee": {
+          "column_name": "shipping_fee",
+          "column_comment": "DECIMAL",
+          "data_type": "REAL",
+          "is_nullable": true
+        },
+        "taxes": {
+          "column_name": "taxes",
+          "column_comment": "DECIMAL",
+          "data_type": "REAL",
+          "is_nullable": true
+        },
+        "payment_date": {
+          "column_name": "payment_date",
+          "column_comment": "DATETIME",
+          "data_type": "REAL",
+          "is_nullable": true
+        },
+        "payment_amount": {
+          "column_name": "payment_amount",
+          "column_comment": "DECIMAL",
+          "data_type": "REAL",
+          "is_nullable": true
+        },
+        "payment_method": {
+          "column_name": "payment_method",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "notes": {
+          "column_name": "notes",
+          "data_type": "TEXT",
+          "is_nullable": true
+        },
+        "approved_by": {
+          "column_name": "approved_by",
+          "data_type": "INT",
+          "is_nullable": true
+        },
+        "approved_date": {
+          "column_name": "approved_date",
+          "column_comment": "DATETIME",
+          "data_type": "REAL",
+          "is_nullable": true
+        },
+        "submitted_by": {
+          "column_name": "submitted_by",
+          "data_type": "INT",
+          "is_nullable": true
         }
       }
     }

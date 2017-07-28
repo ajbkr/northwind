@@ -5,3 +5,8 @@ LONGTEXT, VARCHAR -> TEXT
 DEFAULT: column_default
 
 JSON Schema validation
+
+Data type translation
+	MySQL -> Sequelize
+	MySQL -> SQLite
+	MySQL -> Django ORM
