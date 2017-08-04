@@ -66,6 +66,42 @@ var generators = {
   }
 };
 
+var helpers = Object.assign({}, require('change-case'), {
+  // Convert MySQL data type to equivalent Django/Sequelize/SQLite data type
+  dataType: function(dbms, dataType) {
+    var dataTypes = {
+      django: {
+        BLOB:     'Binary',
+        DATETIME: 'Date',
+        DECIMAL:  'Decimal',
+        DOUBLE:   'Float',
+        INT:      'Integer',
+        LONGBLOB: 'Binary',
+        LONGTEXT: 'Text',
+        VARCHAR:  'Text'
+      },
+      sequelize: {
+        DATETIME: 'DATE',
+        INT:      'INTEGER',
+        LONGBLOB: 'BLOB',
+        LONGTEXT: 'TEXT',
+        VARCHAR:  'STRING'
+      },
+      sqlite: {
+        DATETIME: 'REAL',
+        DECIMAL:  'REAL',
+        DOUBLE:   'REAL',
+        LONGBLOB: 'BLOB',
+        LONGTEXT: 'TEXT',
+        VARCHAR:  'TEXT'
+      }
+    };
+
+    return dataTypes[dbms][dataType] || dataType;
+  }
+});
+
 module.exports = {
-  generators: generators
+  generators: generators,
+  helpers:    helpers
 };
