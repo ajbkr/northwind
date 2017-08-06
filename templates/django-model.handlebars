@@ -1,5 +1,5 @@
 from django.db import models
 
-class {{pascalCase table_name}}(models.Model):
-{{#each columns}}    {{this.column_name}} = models.{{dataType 'django' this.data_type}}Field()
+class {{pascalcase table_name}}(models.Model):
+{{#each columns}}    {{this.column_name}} = models.{{dataType 'django' this.data_type}}Field({{#compare this.data_type '==' 'VARCHAR'}}{{#if this.character_max_length}}max_length={{this.character_max_length}}{{/if}}{{/compare}})
 {{/each}}

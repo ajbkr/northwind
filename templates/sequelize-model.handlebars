@@ -2,9 +2,9 @@ var Sequelize = require('sequelize');
 
 var sequelize = new Sequelize('database', 'username', 'password');
 
-const {{pascalCase table_name}} = sequelize.define('{{table_name}}', {
+const {{pascalcase table_name}} = sequelize.define('{{table_name}}', {
 {{#each columns}}{{#if @first}}{{else}},
-{{/if}}  {{this.column_name}}: Sequelize.{{dataType 'sequelize' this.data_type}}{{/each}}
+{{/if}}  {{this.column_name}}: Sequelize.{{dataType 'sequelize' this.data_type}}{{#compare this.data_type '==' 'VARCHAR'}}{{#if this.character_max_length}}({{this.character_max_length}}){{/if}}{{/compare}}{{/each}}
 });
 
-module.exports = {{pascalCase table_name}};
+module.exports = {{pascalcase table_name}};

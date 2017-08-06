@@ -66,7 +66,7 @@ var generators = {
   }
 };
 
-var helpers = Object.assign({}, require('change-case'), {
+var helpers = Object.assign({}, require('handlebars-helpers')(), {
   // Convert MySQL data type to equivalent Django/Sequelize/SQLite data type
   dataType: function(dbms, dataType) {
     var dataTypes = {
@@ -101,7 +101,10 @@ var helpers = Object.assign({}, require('change-case'), {
   }
 });
 
+var schema = require('./northwind.json');
+
 module.exports = {
   generators: generators,
-  helpers:    helpers
+  helpers:    helpers,
+  schema:     schema
 };
