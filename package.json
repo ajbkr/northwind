@@ -1,10 +1,10 @@
 {
   "name": "northwind",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Northwind database as JSON",
   "main": "index.js",
   "scripts": {
-    "dist": "mkdirp dist/models && che che.conf.js northwind.json",
+    "dist": "mkdirp dist/models dist/serializers && che che.conf.js northwind.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew J. Baker <andrew_j_baker2@hotmail.com>",
@@ -14,7 +14,7 @@
   },
   "private": true,
   "devDependencies": {
-    "handlebars-helpers": "^0.9.6",
+    "handlebars-helpers": "^0.10.0",
     "mkdirp": "^0.5.1"
   }
 }
