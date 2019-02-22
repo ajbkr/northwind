@@ -1,10 +1,10 @@
 {
   "name": "northwind",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Northwind database as JSON",
   "main": "index.js",
   "scripts": {
-    "dist": "npm run lint && mkdirp dist/models dist/serializers && che che.conf.js northwind.json",
+    "dist": "mkdirp dist/models dist/serializers dist/sql && che che.conf.js northwind.json",
     "lint": "standard 'che.conf.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

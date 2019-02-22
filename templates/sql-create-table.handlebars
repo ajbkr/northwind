@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS `{{table_name}}` (
+{{#each columns}}{{#if @first}}{{else}},
+{{/if}}  `{{this.column_name}}` {{this.data_type}} {{#if this.is_nullable}}{{else}}NOT {{/if}}NULL{{/each}}
+)

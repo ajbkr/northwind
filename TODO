@@ -1,4 +1,6 @@
 DEFAULT: column_default
 AUTO_INCREMENT
 
+character_max_length in SQL CREATE TABLE template
+
 JSON Schema validation

@@ -41,10 +41,11 @@ const schema = require('./northwind.json')
 const generators = Object.keys(schema.tables).reduce((objekt, table) => ({
   ...objekt,
   [`/tables/${table}`]: {
-    'templates/sqlite-create-table.handlebars': 'dist/' + table.replace(/_/g, '-') + '.js',
     'templates/django-model.handlebars': `dist/models/${table}.py`,
     'templates/drf-serializer.handlebars': `dist/serializers/${table}.py`,
-    'templates/sequelize-model.handlebars': 'dist/models/' + table.replace(/_/g, '-') + '.js'
+    'templates/sequelize-model.handlebars': 'dist/models/' + table.replace(/_/g, '-') + '.js',
+    'templates/sql-create-table.handlebars': 'dist/sql/' + table.replace(/_/g, '-') + '.sql',
+    'templates/sqlite-create-table.handlebars': 'dist/' + table.replace(/_/g, '-') + '.js'
   }
 }), {})
 
