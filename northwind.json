@@ -827,6 +827,120 @@
           "is_nullable": true
         }
       }
+    },
+    "invoices": {
+      "table_name": "invoices",
+      "columns": {
+        "id": {
+          "column_name": "id",
+          "column_key": "PRI",
+          "data_type": "INT",
+          "is_nullable": false
+        },
+        "order_id": {
+          "column_name": "order_id",
+          "data_type": "INT",
+          "is_nullable": true
+        },
+        "invoice_date": {
+          "column_name": "invoice_date",
+          "data_type": "DATETIME",
+          "is_nullable": true
+        },
+        "due_date": {
+          "column_name": "due_date",
+          "data_type": "DATETIME",
+          "is_nullable": true
+        },
+        "tax": {
+          "column_name": "tax",
+          "data_type": "DECIMAL",
+          "is_nullable": true
+        },
+        "shipping": {
+          "column_name": "shipping",
+          "data_type": "DECIMAL",
+          "is_nullable": true
+        },
+        "amount_due": {
+          "column_name": "amount_due",
+          "data_type": "DECIMAL",
+          "is_nullable": true
+        }
+      }
+    },
+    "order_details_status": {
+      "table_name": "order_details_status",
+      "columns": {
+        "id": {
+          "column_name": "id",
+          "column_key": "PRI",
+          "data_type": "INT",
+          "is_nullable": false
+        },
+        "status_name": {
+          "column_name": "status_name",
+          "character_max_length": 50,
+          "data_type": "VARCHAR",
+          "is_nullable": false
+        }
+      }
+    },
+    "order_details": {
+      "table_name": "order_details",
+      "columns": {
+        "id": {
+          "column_name": "id",
+          "column_key": "PRI",
+          "data_type": "INT",
+          "is_nullable": false
+        },
+        "order_id": {
+          "column_name": "order_id",
+          "data_type": "INT",
+          "is_nullable": false
+        },
+        "product_id": {
+          "column_name": "product_id",
+          "data_type": "INT",
+          "is_nullable": true
+        },
+        "quantity": {
+          "column_name": "quantity",
+          "data_type": "DECIMAL",
+          "is_nullable": false
+        },
+        "unit_price": {
+          "column_name": "unit_price",
+          "data_type": "DECIMAL",
+          "is_nullable": true
+        },
+        "discount": {
+          "column_name": "discount",
+          "data_type": "DOUBLE",
+          "is_nullable": false
+        },
+        "status_id": {
+          "column_name": "status_id",
+          "data_type": "INT",
+          "is_nullable": true
+        },
+        "date_allocated": {
+          "column_name": "date_allocated",
+          "data_type": "DATETIME",
+          "is_nullable": true
+        },
+        "purchase_order_id": {
+          "column_name": "purchase_order_id",
+          "data_type": "INT",
+          "is_nullable": true
+        },
+        "inventory_id": {
+          "column_name": "inventory_id",
+          "data_type": "INT",
+          "is_nullable": true
+        }
+      }
     }
   }
 }

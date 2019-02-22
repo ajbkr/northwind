@@ -1,3 +1,4 @@
 DEFAULT: column_default
+AUTO_INCREMENT
 
 JSON Schema validation
