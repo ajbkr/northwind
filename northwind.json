@@ -263,6 +263,7 @@
         },
         "type_name": {
           "column_name": "type_name",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": false
         }
@@ -279,46 +280,55 @@
         },
         "company": {
           "column_name": "company",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "last_name": {
           "column_name": "last_name",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "first_name": {
           "column_name": "first_name",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "email_address": {
           "column_name": "email_address",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "job_title": {
           "column_name": "job_title",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "business_phone": {
           "column_name": "business_phone",
+          "character_max_length": 25,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "home_phone": {
           "column_name": "home_phone",
+          "character_max_length": 25,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "mobile_phone": {
           "column_name": "mobile_phone",
+          "character_max_length": 25,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "fax_number": {
           "column_name": "fax_number",
+          "character_max_length": 25,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
@@ -329,21 +339,25 @@
         },
         "city": {
           "column_name": "city",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "state_province": {
           "column_name": "state_province",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "zip_postal_code": {
           "column_name": "zip_postal_code",
+          "character_max_length": 15,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "country_region": {
           "column_name": "country_region",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
@@ -373,8 +387,9 @@
           "data_type": "INT",
           "is_nullable": false
         },
-        "tax_status": {
+        "tax_status_name": {
           "column_name": "tax_status_name",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": false
         }
@@ -391,6 +406,7 @@
         },
         "status_name": {
           "column_name": "status_name",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": false
         }
@@ -432,6 +448,7 @@
         },
         "ship_name": {
           "column_name": "ship_name",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
@@ -442,21 +459,25 @@
         },
         "ship_city": {
           "column_name": "ship_city",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "ship_state_province": {
           "column_name": "ship_state_province",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "ship_zip_postal_code": {
           "column_name": "ship_zip_postal_code",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "ship_country_region": {
           "column_name": "ship_country_region",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
@@ -472,6 +493,7 @@
         },
         "payment_type": {
           "column_name": "payment_type",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
@@ -518,11 +540,13 @@
         },
         "product_code": {
           "column_name": "product_code",
+          "character_max_length": 25,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "product_name": {
           "column_name": "product_name",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
@@ -553,6 +577,7 @@
         },
         "quantity_per_unit": {
           "column_name": "quantity_per_unit",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
@@ -568,6 +593,7 @@
         },
         "category": {
           "column_name": "category",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
@@ -589,6 +615,7 @@
         },
         "status": {
           "column_name": "status",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         }
@@ -605,46 +632,55 @@
         },
         "company": {
           "column_name": "company",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "last_name": {
           "column_name": "last_name",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "first_name": {
           "column_name": "first_name",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "email_address": {
           "column_name": "email_address",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "job_title": {
           "column_name": "job_title",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "business_phone": {
           "column_name": "business_phone",
+          "character_max_length": 25,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "home_phone": {
           "column_name": "home_phone",
+          "character_max_length": 25,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "mobile_phone": {
           "column_name": "mobile_phone",
+          "character_max_length": 25,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "fax_number": {
           "column_name": "fax_number",
+          "character_max_length": 25,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
@@ -655,21 +691,25 @@
         },
         "city": {
           "column_name": "city",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "state_province": {
           "column_name": "state_province",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "zip_postal_code": {
           "column_name": "zip_postal_code",
+          "character_max_length": 15,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
         "country_region": {
           "column_name": "country_region",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
@@ -751,6 +791,7 @@
         },
         "payment_method": {
           "column_name": "payment_method",
+          "character_max_length": 50,
           "data_type": "VARCHAR",
           "is_nullable": true
         },
