@@ -1,7 +1,8 @@
-var helpers = Object.assign({}, require('handlebars-helpers')(), {
+const helpers = {
+  ...require('handlebars-helpers')(),
   // Convert MySQL data type to equivalent Django/Sequelize/SQLite data type
-  dataType: function (dbms, dataType) {
-    var dataTypes = {
+  dataType: (dbms, dataType) => {
+    const dataTypes = {
       django: {
         BLOB: 'Binary',
         DATETIME: 'Date',
@@ -33,22 +34,22 @@ var helpers = Object.assign({}, require('handlebars-helpers')(), {
       ? dataTypes[dbms][dataType]
       : dataType
   }
-})
+}
 
-var schema = require('./northwind.json')
+const schema = require('./northwind.json')
 
-var generators = Object.keys(schema.tables).reduce(function (objekt, table) {
-  objekt['/tables/' + table] = {
+const generators = Object.keys(schema.tables).reduce((objekt, table) => ({
+  ...objekt,
+  [`/tables/${table}`]: {
     'templates/sqlite-create-table.handlebars': 'dist/' + table.replace(/_/g, '-') + '.js',
-    'templates/django-model.handlebars': 'dist/models/' + table + '.py',
-    'templates/drf-serializer.handlebars': 'dist/serializers/' + table + '.py',
+    'templates/django-model.handlebars': `dist/models/${table}.py`,
+    'templates/drf-serializer.handlebars': `dist/serializers/${table}.py`,
     'templates/sequelize-model.handlebars': 'dist/models/' + table.replace(/_/g, '-') + '.js'
   }
-  return objekt
-}, {})
+}), {})
 
 module.exports = {
-  generators: generators,
-  helpers: helpers,
-  schema: schema
+  generators,
+  helpers,
+  schema
 }
