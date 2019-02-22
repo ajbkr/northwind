@@ -941,6 +941,96 @@
           "is_nullable": true
         }
       }
+    },
+    "purchase_order_details": {
+      "table_name": "purchase_order_details",
+      "columns": {
+        "id": {
+          "column_name": "id",
+          "column_key": "PRI",
+          "data_type": "INT",
+          "is_nullable": false
+        },
+        "purchase_order_id": {
+          "column_name": "purchase_order_id",
+          "data_type": "INT",
+          "is_nullable": false
+        },
+        "quantity": {
+          "column_name": "quantity",
+          "data_type": "DECIMAL",
+          "is_nullable": false
+        },
+        "unit_cost": {
+          "column_name": "unit_cost",
+          "data_type": "DECIMAL",
+          "is_nullable": true
+        },
+        "date_received": {
+          "column_name": "date_received",
+          "data_type": "DATETIME",
+          "is_nullable": true
+        },
+        "posted_to_inventory": {
+          "column_name": "posted_to_inventory",
+          "data_type": "INT",
+          "is_nullable": false
+        },
+        "inventory_id": {
+          "column_name": "inventory_id",
+          "data_type": "INT",
+          "is_nullable": true
+        }
+      }
+    },
+    "sales_reports": {
+      "table_name": "sales_reports",
+      "columns": {
+        "group_by": {
+          "column_name": "group_by",
+          "character_max_length": 50,
+          "data_type": "VARCHAR",
+          "is_nullable": false
+        },
+        "display": {
+          "column_name": "display",
+          "character_max_length": 50,
+          "data_type": "VARCHAR",
+          "is_nullable": true
+        },
+        "title": {
+          "column_name": "title",
+          "character_max_length": 50,
+          "data_type": "VARCHAR",
+          "is_nullable": true
+        },
+        "filter_row_source": {
+          "column_name": "filter_row_source",
+          "data_type": "LONGTEXT",
+          "is_nullable": true
+        },
+        "default": {
+          "column_name": "default",
+          "data_type": "INT",
+          "is_nullable": false
+        }
+      }
+    },
+    "strings": {
+      "table_name": "strings",
+      "columns": {
+        "string_id": {
+          "column_name": "string_id",
+          "data_type": "INT",
+          "is_nullable": false
+        },
+        "string_data": {
+          "column_name": "string_data",
+          "character_max_length": 255,
+          "data_type": "VARCHAR",
+          "is_nullable": true
+        }
+      }
     }
   }
 }
