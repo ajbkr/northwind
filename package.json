@@ -15,8 +15,8 @@
   },
   "private": true,
   "devDependencies": {
-    "handlebars-helpers": "^0.10.0",
+    "handlebars-helpers": "github:ajbkr/handlebars-helpers#master",
     "mkdirp": "^0.5.1",
-    "standard": "^13.1.0"
+    "standard": "^14.3.1"
   }
 }
