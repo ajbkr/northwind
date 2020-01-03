@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS `<%= table_name %>` (
+<% Object.keys(columns).forEach(function (key, index) { %><% if (index !== 0) { %>,
+<% } %>  `<%= columns[key].column_name %>` <%= columns[key].data_type %> <% if (!columns[key].is_nullable) { %>NOT <% } %>NULL<% }) %>
+)

@@ -1,0 +1,12 @@
+from django.db import models
+
+
+class <%= pascalcase(table_name) %>(models.Model):<% Object.keys(columns).forEach(function (key, index) { %>
+    <%= columns[key].column_name %> = models.<%= dataType('django', columns[key].data_type) %>Field(
+        <% if (columns[key].data_type === 'VARCHAR') { %>max_length=<% if (columns[key].character_max_length) { print(columns[key].character_max_length) } else { %>255<% } %>,
+<% } %>
+        <% if (columns[key].column_key === 'PRI') { %>primary_key=True,
+<% } %>
+    )
+<% }) %>
+

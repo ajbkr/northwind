@@ -1,3 +1,0 @@
-db.serialize(function() {
-  db.run('CREATE TABLE {{table_name}} ({{#each columns}}{{#if @first}}{{else}}, {{/if}}{{this.column_name}} {{dataType 'sqlite' this.data_type}} {{#if this.is_nullable}}{{else}}NOT {{/if}}NULL{{/each}})');
-});

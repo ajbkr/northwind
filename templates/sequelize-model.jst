@@ -1,0 +1,10 @@
+const Sequelize = require('sequelize')
+
+const sequelize = new Sequelize('database', 'username', 'password')
+
+const <%= pascalcase(table_name) %> = sequelize.define('<%= table_name %>', {
+<% Object.keys(columns).forEach(function (key, index) { %><% if (index !== 0) { %>,
+<% } %>  <%= columns[key].column_name %>: Sequelize.<%= dataType('sequelize', columns[key].data_type) %><% if (columns[key].data_type === 'VARCHAR') { %><% if (columns[key].character_max_length) { %>(<%= columns[key].character_max_length %>)<% } %><% } %><% }) %>
+})
+
+module.exports = <%= pascalcase(table_name) %>

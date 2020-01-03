@@ -1,0 +1,3 @@
+db.serialize(function() {
+  db.run('CREATE TABLE <%= table_name %> (<% Object.keys(columns).forEach(function (key, index) { %><% if (index !== 0) { %>, <% } %><%= columns[key].column_name %> <%= dataType('sqlite', columns[key].data_type) %> <% if (!columns[key].is_nullable) { %>NOT <% } %>NULL<% }) %>)');
+});

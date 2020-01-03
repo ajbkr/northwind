@@ -1,0 +1,26 @@
+from rest_framework import serializers
+from ..models.<%= table_name %> import <%= pascalcase(table_name) %>
+
+
+class <%= pascalcase(table_name) %>Serializer(serializers.Serializer):<% Object.keys(columns).forEach(function (key, index) { %>
+    <%= columns[key].column_name %> = serializers.<%= dataType('django', columns[key].data_type) %>Field(
+        <% if (columns[key].data_type === 'VARCHAR') { %>max_length=<% if (columns[key].character_max_length) { print(columns[key].character_max_length) } else { %>255<% } %>,
+        <% } %>)
+<% }) %>
+
+
+    def create(self, validated_data):
+        """
+        Create and return a new `<%= pascalcase(table_name) %>` instance, given the validated data.
+        """
+        return <%= pascalcase(table_name) %>.objects.create(**validated_data)
+
+    def update(self, instance, validated_data):
+        """
+        Update and return an existing `<%= pascalcase(table_name) %>` instance, given the validated data.
+        """
+        <% Object.keys(columns).forEach(function (key, index) { %>
+        instance.<%= columns[key].column_name %> = validated_data.get('<%= columns[key].column_name %>', instance.<%= columns[key].column_name %>)
+<% }) %>
+        instance.save()
+        return instance
