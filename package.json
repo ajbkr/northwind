@@ -11,12 +11,13 @@
   "author": "Andrew J. Baker <andrew_j_baker2@hotmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
-    "che": "git+https://github.com/ajbkr/che.git"
+    "che": "git+https://github.com/ajbkr/che.git",
+    "lodash.template": "^4.5.0",
+    "template-helpers": "^1.0.1"
   },
   "private": true,
   "devDependencies": {
     "mkdirp": "^0.5.1",
-    "standard": "^14.3.1",
-    "template-helpers": "^1.0.1"
+    "standard": "^14.3.1"
   }
 }

@@ -1,3 +1,5 @@
+const template = require('lodash.template')
+
 const helpers = {
   ...require('template-helpers')('string'),
   // Convert MySQL data type to equivalent Django/Sequelize/SQLite data type
@@ -36,6 +38,8 @@ const helpers = {
   }
 }
 
+const compile = string => template(string, { imports: helpers })
+
 const schema = require('./northwind.json')
 
 const generators = Object.keys(schema.tables).reduce((objekt, table) => ({
@@ -50,7 +54,7 @@ const generators = Object.keys(schema.tables).reduce((objekt, table) => ({
 }), {})
 
 module.exports = {
+  compile,
   generators,
-  helpers,
   schema
 }
