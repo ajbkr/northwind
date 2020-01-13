@@ -1,0 +1,24 @@
+const { send } = require('micro')
+
+const helpers = require('./helpers')
+
+const <%= pascalcase(singular(table_name)) %> = require('../models/<%= replace(singular(table_name), '_', '-') %>')
+
+module.exports = {
+  pattern: /^\/api\/<%= replace(table_name, '_', '-') %>\/?$/,
+  // GET /api/<%= replace(table_name, '_', '-') %>/
+
+  handler: async function (req, res) {
+    const { send405 } = helpers(req, res)
+
+    if (req.method === 'GET') {
+      const <%= camelcase(table_name) %> = await <%= pascalcase(singular(table_name)) %>.fetchAll()
+
+      const data = <%= camelcase(table_name) %>.models.map(({ attributes }) => attributes)
+
+      send(res, 200, data)
+    } else {
+      send405()
+    }
+  }
+}
