@@ -55,6 +55,7 @@ const generators = Object.keys(schema.tables).reduce((objekt, table) => ({
     'templates/django-model.jst': `dist/models/${table}.py`,
     'templates/drf-serializer.jst': `dist/serializers/${table}.py`,
     'templates/micro-routes.jst': 'dist/routes/api-' + table.replace(/_/g, '-') + '.js',
+    'templates/micro-routes-id.jst': 'dist/routes/api-' + table.replace(/_/g, '-') + '-id.js',
     'templates/sequelize-model.jst': 'dist/models/' + table.replace(/_/g, '-') + '.js',
     'templates/sql-create-table.jst': 'dist/sql/' + table.replace(/_/g, '-') + '.sql',
     'templates/sqlite-create-table.jst': 'dist/' + table.replace(/_/g, '-') + '.js'
